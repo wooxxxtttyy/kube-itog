@@ -30,11 +30,11 @@ tasks:
 
   deploy:
     cmds:
-      - kubectl apply -n sirius -f ./deployments/k8s/api/
-      - kubectl apply -n sirius -f ./deployments/k8s/info/
-      - kubectl apply -n sirius -f ./deployments/k8s/login/
-      - kubectl apply -n sirius -f ./deployments/k8s/root/
-      - kubectl apply -n sirius -f ./deployments/k8s/ingress.yaml
+      - kubectl apply -n dasha -f ./deployments/k8s/api/
+      - kubectl apply -n dasha -f ./deployments/k8s/info/
+      - kubectl apply -n dasha -f ./deployments/k8s/login/
+      - kubectl apply -n dasha -f ./deployments/k8s/root/
+      - kubectl apply -n dasha -f ./deployments/k8s/ingress.yaml
 
   release:
     cmds:
