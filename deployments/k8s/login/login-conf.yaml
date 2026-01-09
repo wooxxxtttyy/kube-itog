@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: login-conf
+  namespace: dasha
+data:
+  LOGIN_APP_NAME: "login"
+  LOGIN_BIND_PORT: "8080"

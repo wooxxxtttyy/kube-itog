@@ -1,0 +1,21 @@
+name: deploy to kubernetes
+on:
+  workflow_dispatch:
+
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v6
+
+      - name: Install Task
+        uses: arduino/setup-task@v1
+      
+      - name: Configure kubectl
+        run: |
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+
+      - name: Deploy to Kubernetes
+        run: task deploy

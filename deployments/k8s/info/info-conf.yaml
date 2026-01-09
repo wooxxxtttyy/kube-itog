@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: info-conf
+  namespace: dasha
+data:
+  INFO_APP_NAME: "Info"
+  INFO_BIND_PORT: "8080"
